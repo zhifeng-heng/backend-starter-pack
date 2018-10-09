@@ -23,18 +23,25 @@ npm run dev
 
 ## Dockerize
 
-Below commands will build an docker image of the application and push to Docker Hub.
+This will require you to have Docker installed.
+Below commands will build a Docker image of the application and push to Docker Hub.
 
 ```
 docker-compose build -t {docker_id}/{image_name} .
 docker push {docker_id}/{image_name}
 ```
 
-Assuming you have docker-compose installed, you can then start/stop the application using the below commands.
+To run the application locally using docker-compose.
 
 ```
 docker-compose up
 docker-compose down
+```
+
+To run the application by pulling the image from Docker Hub.
+
+```
+docker run -d -p 3000:3000 --name backend-starter-pack {docker_id}/{image_name}
 ```
 
 By default the API server starts on port 3000, http://localhost:3000.
