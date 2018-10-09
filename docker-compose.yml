@@ -1,0 +1,13 @@
+version : "3"
+services:
+  rd-backend:
+    container_name: backend-starter-pack
+    image: backend-starter-pack
+    build: .    
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/backend-starter-pack
+      - /backend-starter-pack/node_modules/
+
